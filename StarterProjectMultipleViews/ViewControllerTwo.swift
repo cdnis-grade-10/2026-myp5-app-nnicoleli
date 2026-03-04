@@ -31,9 +31,16 @@ class ViewControllerTwo: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var timerLabel: UILabel!
     
+    @IBOutlet weak var startPauseButton: UIButton!
+    
+    @IBOutlet weak var endButton: UIButton!
     
     // MARK: - Variables and Constants
+    var timer:Timer = Timer()
+    var count:Int = 0
+    var timerCounting:Bool = false
     
     
     
@@ -42,7 +49,35 @@ class ViewControllerTwo: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        startPauseButton.setTitleColor(UIColor.green, for: .normal)
+        
     }
 
-
+    
+    
+    @IBAction func endTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func startPauseTapped(_ sender: Any) {
+        if(timerCounting){
+          timerCounting = false
+            timer.invalidate()
+            startPauseButton.setTitle("START", for: .normal)
+            startPauseButton.setTitleColor(UIColor.green, for: .normal)
+        }else{
+            timerCounting = true
+            startPauseButton.setTitle("PAUSE", for: .normal)
+            startPauseButton.setTitleColor(UIColor.red, for: .normal)
+            timer = Timer.scheduledTimer(timeInterval: 1,target:self, selector:#selector(timerCounter, userInfo: nil, repeats: true))
+        }
+    }
+    
+    @objc func timerCounter() -> Void {
+        count = count + 1
+    }
+    
+    func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int){
+        return(seconds / 3600, seconds % 3600)
+    }
 }
