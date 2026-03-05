@@ -57,6 +57,7 @@ class ViewControllerTwo: UIViewController {
     
     @IBAction func endTapped(_ sender: Any) {
         
+        
     }
     
     @IBAction func startPauseTapped(_ sender: Any) {
@@ -69,15 +70,30 @@ class ViewControllerTwo: UIViewController {
             timerCounting = true
             startPauseButton.setTitle("PAUSE", for: .normal)
             startPauseButton.setTitleColor(UIColor.red, for: .normal)
-            timer = Timer.scheduledTimer(timeInterval: 1,target:self, selector:#selector(timerCounter, userInfo: nil, repeats: true))
+            timer = Timer.scheduledTimer(timeInterval: 1,target:self, selector:#selector(timerCounter), userInfo: nil, repeats: true)
         }
     }
     
     @objc func timerCounter() -> Void {
         count = count + 1
+        let time = secondsToHoursMinutesSeconds(seconds: count)
+        let timeString = makeTimeString(hours: time.0, minutes: time0.1, seconds: time0.2)
+        timerLabel.text = timeString
     }
     
     func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int){
-        return(seconds / 3600, seconds % 3600)
+        return((seconds / 3600), (seconds % 3600)/60, (seconds % 3600) % 60)
+    }
+    
+    func makeTimeString(hours: Int, minutes: Int, seconds: Int) -> String
+    {
+        
+        var timeString = ""
+        timeString += String(format:"0%2d", hours)
+        timeString += " : "
+        timeString += String(format:"0%2d", minutes)
+        timeString += " : "
+        timeString += String(format:"0%2d", seconds)
+        return timeString
     }
 }
