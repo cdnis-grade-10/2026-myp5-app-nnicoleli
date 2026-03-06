@@ -55,9 +55,24 @@ class ViewControllerTwo: UIViewController {
 
     
     
-    @IBAction func endTapped(_ sender: Any) {
+    @IBAction func endTapped(_ sender: Any) { //Codes for what will happen when the end button is tapped
         
+        /* sends an alert, asking the user if they want to end sessoin
+         user can select cancel, or yes */
+        let alert = UIAlertController(title: "End session?", message: "Are you sure you would like to end session?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: { (_) in
+            //do nothing
+        }))
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (_) in
+            // if user selected yes, then reset the timer to its original state
+            self.count = 0
+            self.timer.invalidate()
+            self.timerLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
+            self.startPauseButton.setTitle("START", for: .normal)
+            self.startPauseButton.setTitleColor(UIColor.green, for: .normal)
+        }))
         
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func startPauseTapped(_ sender: Any) {
@@ -77,11 +92,12 @@ class ViewControllerTwo: UIViewController {
     @objc func timerCounter() -> Void {
         count = count + 1
         let time = secondsToHoursMinutesSeconds(seconds: count)
-        let timeString = makeTimeString(hours: time.0, minutes: time0.1, seconds: time0.2)
+        let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
         timerLabel.text = timeString
     }
     
     func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int){
+        // turns the really big seconds string into seconds, minutes, and hours
         return((seconds / 3600), (seconds % 3600)/60, (seconds % 3600) % 60)
     }
     
@@ -89,11 +105,11 @@ class ViewControllerTwo: UIViewController {
     {
         
         var timeString = ""
-        timeString += String(format:"0%2d", hours)
+        timeString += String(format:"%02d", hours)
         timeString += " : "
-        timeString += String(format:"0%2d", minutes)
+        timeString += String(format:"%02d", minutes)
         timeString += " : "
-        timeString += String(format:"0%2d", seconds)
+        timeString += String(format:"%02d", seconds)
         return timeString
     }
 }
