@@ -11,10 +11,12 @@ class ViewControllerFive: UIViewController {
     
     // MARK: - IBOutlets
    
-    
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var noteLabel: UITextView!
     
     // MARK: - Variables and Constants
-    
+    public var noteTitle: String = ""
+    public var note: String = ""
 
     
     // MARK: - IBActions and Functions
@@ -23,6 +25,8 @@ class ViewControllerFive: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     
+        titleLabel.text = noteTitle
+        noteLabel.text = note
     }
     
    
