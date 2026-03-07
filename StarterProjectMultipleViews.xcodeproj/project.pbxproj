@@ -15,6 +15,8 @@
 		120E28A327DAFAF6000129B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120E28A127DAFAF6000129B5 /* LaunchScreen.storyboard */; };
 		120E28AB27DAFE95000129B5 /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E28AA27DAFE95000129B5 /* ViewControllerTwo.swift */; };
 		121E32872817B5A200DC59D4 /* ViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E32862817B5A200DC59D4 /* ViewControllerThree.swift */; };
+		BB40E4D32F5C09E5005F3FC3 /* ViewControllerFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40E4D22F5C09E5005F3FC3 /* ViewControllerFour.swift */; };
+		BB40E4D52F5C09FB005F3FC3 /* ViewControllerFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40E4D42F5C09FB005F3FC3 /* ViewControllerFive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		120E28A427DAFAF6000129B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		120E28AA27DAFE95000129B5 /* ViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = "<group>"; };
 		121E32862817B5A200DC59D4 /* ViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerThree.swift; sourceTree = "<group>"; };
+		BB40E4D22F5C09E5005F3FC3 /* ViewControllerFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFour.swift; sourceTree = "<group>"; };
+		BB40E4D42F5C09FB005F3FC3 /* ViewControllerFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				120E28AA27DAFE95000129B5 /* ViewControllerTwo.swift */,
 				121E32862817B5A200DC59D4 /* ViewControllerThree.swift */,
 				120E289C27DAFAF4000129B5 /* Main.storyboard */,
+				BB40E4D42F5C09FB005F3FC3 /* ViewControllerFive.swift */,
+				BB40E4D22F5C09E5005F3FC3 /* ViewControllerFour.swift */,
 				120E289F27DAFAF6000129B5 /* Assets.xcassets */,
 				120E28A127DAFAF6000129B5 /* LaunchScreen.storyboard */,
 				120E28A427DAFAF6000129B5 /* Info.plist */,
@@ -146,9 +152,11 @@
 			files = (
 				120E28AB27DAFE95000129B5 /* ViewControllerTwo.swift in Sources */,
 				120E289B27DAFAF4000129B5 /* ViewControllerOne.swift in Sources */,
+				BB40E4D32F5C09E5005F3FC3 /* ViewControllerFour.swift in Sources */,
 				121E32872817B5A200DC59D4 /* ViewControllerThree.swift in Sources */,
 				120E289727DAFAF4000129B5 /* AppDelegate.swift in Sources */,
 				120E289927DAFAF4000129B5 /* SceneDelegate.swift in Sources */,
+				BB40E4D52F5C09FB005F3FC3 /* ViewControllerFive.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
