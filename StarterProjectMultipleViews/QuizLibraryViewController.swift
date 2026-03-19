@@ -7,60 +7,75 @@
 
 import UIKit
 
-class QuizLibraryViewController: UIViewController {
+class QuizLibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - IBOutlets
-   
+    
     @IBOutlet weak var tableView: UITableView!
     
     
     // MARK: - Variables and Constants
-    private var quizzes: [Quiz] = QuizData.allQuizzes
-
+    
     
     // MARK: - IBActions and Functions
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Quizzes"
-               
-               tableView.dataSource = self
-               tableView.delegate = self
-               tableView.rowHeight = 80  // gives space for image + text
-        // Do any additional setup after loading the view.
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return allQuizzes.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell", for: indexPath)
+        cell.textLabel?.text = allQuizzes[indexPath.row].quizTitle
+        cell.detailTextLabel?.text = allQuizzes[indexPath.row].quizDescription
+        cell.imageView?.image = allQuizzes[indexPath.row].quizCoverImage
+        return cell
+    }
+    
+    private func registerTableViewCells(){
+        let textFieldCell = UINib(nibName: "AllQuizesTableViewCell",
+                                     bundle: nil)
+           self.tableView.register(textFieldCell,
+                                   forCellReuseIdentifier: "AllQuizzesTableViewCell")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowQuiz",
            let quizVC = segue.destination as? QuizViewController,
            let indexPath = tableView.indexPathForSelectedRow {
-            let selectedQuiz = quizzes[indexPath.row]
+            let selectedQuiz = allQuizzes[indexPath.row]
             quizVC.quiz = selectedQuiz
+
         }
     }
-}
-
-extension QuizLibraryViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quizzes.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell", for: indexPath)
+    
+    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //        let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell", for: indexPath)
+    //
+    //        let quiz = allQuizzes[indexPath.row]
+    //        cell.textLabel?.text = quiz.quizTitle
+    //        cell.detailTextLabel?.text = quiz.quizDescription
+    //        cell.imageView?.image = quiz.quizCoverImage
+    //        cell.imageView?.contentMode = .scaleAspectFill
+    //
+    //        return cell
+    //    }
+    //}
+    //
+    //extension QuizLibraryViewController: UITableViewDelegate {
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        tableView.deselectRow(at: indexPath, animated: true)
+    //    }
+    //}
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let nib = UINib(nibName: "AllQuizzesTableViewCell", bundle: nil) // 1. calling CustomTableViewCell.xib
+          self.tableView.register(nib, forCellReuseIdentifier: "QuizCell") // 2. register to the NewTableView
         
-        let quiz = quizzes[indexPath.row]
-        cell.textLabel?.text = quiz.quizTitle
-        cell.detailTextLabel?.text = quiz.quizDescription
-        cell.imageView?.image = quiz.quizCoverImage
-        cell.imageView?.contentMode = .scaleAspectFill
-        
-        return cell
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = 100  //space for image + text
+    
     }
 }
-
-extension QuizLibraryViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-

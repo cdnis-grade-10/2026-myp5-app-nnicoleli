@@ -26,17 +26,29 @@ class QuizViewController: UIViewController {
     
     var quiz: Quiz!
     
+    var currentIndex = 1
     private var currentQuestionIndex = 0
        private var score = 0
     
     // MARK: - IBActions and Functions
     
+    
+    
+    func displayQuizData() {
+//        snakeImageView.image = UIImage(named: snakes[currentIndex].photo)
+//        snakeCommonNameLabel.text = snakes[currentIndex].englishCommonName
+//        snakeSpeciesNameLabel.text = snakes[currentIndex].speciesName
+//        snakeLethalityLabel.text = snakes[currentIndex].lethality.rawValue
+        progressLabel.text = "Question \(currentQuestionIndex + 1) of \(quiz.questions.count)"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         title = quiz.quizTitle
         configureButtons()
         showCurrentQuestion()
+        loadQuizData()
+        displayQuizData()
     }
 
     private func configureButtons() {
@@ -62,7 +74,6 @@ class QuizViewController: UIViewController {
 
           progressLabel.text = "Question \(currentQuestionIndex + 1) of \(quiz.questions.count)"
 
-          // Assumes 4 options – you can generalize this to a table view if needed
           optionButton1.setTitle(question.options[0], for: .normal)
           optionButton2.setTitle(question.options[1], for: .normal)
           optionButton3.setTitle(question.options[2], for: .normal)
