@@ -75,11 +75,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2tO-tr-1LW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2tO-tr-1LW">
                                 <rect key="frame" x="0.0" y="143" width="440" height="737"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="124" id="ZOW-l6-GBn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="124" id="ZOW-l6-GBn">
                                         <rect key="frame" x="0.0" y="50" width="440" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZOW-l6-GBn" id="3LL-qU-juo">
@@ -87,13 +88,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bt8-gR-hfz" kind="show" id="KCD-kI-r6K"/>
+                                            <segue destination="bt8-gR-hfz" kind="showDetail" identifier="ShowQuiz" id="1uD-Vk-slQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mAT-4g-98G" id="azz-XR-Jp7"/>
+                                    <outlet property="delegate" destination="mAT-4g-98G" id="bEg-UK-pB4"/>
+                                </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="QUIZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xey-50-Ano">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QUIZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xey-50-Ano">
                                 <rect key="frame" x="180" y="-57" width="81" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,14 +107,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7gj-aE-swE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="7gj-aE-swE" firstAttribute="trailing" secondItem="2tO-tr-1LW" secondAttribute="trailing" id="4PT-iw-zVM"/>
-                            <constraint firstItem="2tO-tr-1LW" firstAttribute="top" secondItem="xey-50-Ano" secondAttribute="bottom" constant="50" id="4hE-NC-0DR"/>
-                            <constraint firstItem="2tO-tr-1LW" firstAttribute="leading" secondItem="7gj-aE-swE" secondAttribute="leading" id="Fvt-aF-McO"/>
-                            <constraint firstItem="2tO-tr-1LW" firstAttribute="centerX" secondItem="mAT-4g-98G" secondAttribute="centerX" id="Uwj-r3-qLT"/>
-                            <constraint firstItem="7gj-aE-swE" firstAttribute="bottom" secondItem="2tO-tr-1LW" secondAttribute="bottom" id="k4K-Oe-Wnf"/>
-                            <constraint firstItem="2tO-tr-1LW" firstAttribute="centerY" secondItem="mAT-4g-98G" secondAttribute="centerY" id="ozV-tU-Lnr"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="2tO-tr-1LW" id="wu0-66-63H"/>
@@ -121,7 +119,7 @@
         <!--Quiz View Controller-->
         <scene sceneID="Eok-57-0fA">
             <objects>
-                <viewController id="bt8-gR-hfz" customClass="QuizViewController" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizViewController" id="bt8-gR-hfz" customClass="QuizViewController" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nq0-2V-wUf">
                         <rect key="frame" x="0.0" y="0.0" width="440" height="884"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

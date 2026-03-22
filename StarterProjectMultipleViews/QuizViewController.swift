@@ -23,12 +23,11 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var optionButton3: UIButton!
     @IBOutlet weak var optionButton2: UIButton!
     // MARK: - Variables and Constants
-    
     var quiz: Quiz!
     
-    var currentIndex = 1
+//    var currentIndex = 1
     private var currentQuestionIndex = 0
-       private var score = 0
+    private var score = 0
     
     // MARK: - IBActions and Functions
     
@@ -47,10 +46,12 @@ class QuizViewController: UIViewController {
         title = quiz.quizTitle
         configureButtons()
         showCurrentQuestion()
-        loadQuizData()
-        displayQuizData()
+        
+    
+        
     }
 
+    //styling all the buttons with rounded corners and borders
     private func configureButtons() {
           let buttons = [optionButton1, optionButton2, optionButton3, optionButton4]
 
@@ -63,7 +64,9 @@ class QuizViewController: UIViewController {
           }
       }
 
+    //main function to display current question + reset buttons
       private func showCurrentQuestion() {
+          //if no more questions, show final screen
           guard currentQuestionIndex < quiz.questions.count else {
               showFinalScore()
               return
@@ -71,17 +74,21 @@ class QuizViewController: UIViewController {
 
           let question = quiz.questions[currentQuestionIndex]
           questionLabel.text = question.prompt
-
+          
+          //update progress label
           progressLabel.text = "Question \(currentQuestionIndex + 1) of \(quiz.questions.count)"
-
+          
+          //set button texts to current question options
           optionButton1.setTitle(question.options[0], for: .normal)
           optionButton2.setTitle(question.options[1], for: .normal)
           optionButton3.setTitle(question.options[2], for: .normal)
           optionButton4.setTitle(question.options[3], for: .normal)
 
+          //enable all the option buttons for user selection
           enableOptionButtons(true)
       }
 
+    // enable/disables option buttons & changes appearance
       private func enableOptionButtons(_ enabled: Bool) {
           [optionButton1, optionButton2, optionButton3, optionButton4].forEach {
               $0?.isEnabled = enabled
@@ -89,29 +96,30 @@ class QuizViewController: UIViewController {
           }
       }
     
+    //what happens when the button is tapped
     @IBAction func optionButtonTapped(_ sender: UIButton) {
         let question = quiz.questions[currentQuestionIndex]
-               let selectedIndex = sender.tag
-               let isCorrect = (selectedIndex == question.correctIndex)
-
-               if isCorrect {
-                   score += 1
+        let selectedIndex = sender.tag //which button was tapped
+        let isCorrect = (selectedIndex == question.correctIndex)
+        //increment if score is correct
+        if isCorrect {
+            score += 1
         
     }
     
         // Simple immediate feedback via button color
-                highlightAnswer(selected: selectedIndex, correctIndex: question.correctIndex)
+        highlightAnswer(selected: selectedIndex, correctIndex: question.correctIndex)
 
-                // Move to next question after a short delay
-                enableOptionButtons(false)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
-                    guard let self = self else { return }
-                    self.currentQuestionIndex += 1
-                    self.resetButtonAppearance()
-                    self.showCurrentQuestion()
-                }
-            }
-
+        // Move to next question after a short delay
+        enableOptionButtons(false)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
+            guard let self = self else { return }
+            self.currentQuestionIndex += 1
+            self.resetButtonAppearance()
+            self.showCurrentQuestion()
+        }
+    }
+    
             private func highlightAnswer(selected: Int, correctIndex: Int) {
                 let buttons = [optionButton1, optionButton2, optionButton3, optionButton4]
 

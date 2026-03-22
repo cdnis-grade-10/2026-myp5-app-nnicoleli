@@ -15,9 +15,20 @@ class QuizLibraryViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     // MARK: - Variables and Constants
-    
+    /* to track if the quiz data has loaded
+     prevent reloading data*/
+    private var hasLoadedData = false
     
     // MARK: - IBActions and Functions
+    //To ensure the data is only loaded once
+    func loadQuizDataIfNeeded () {
+        if !hasLoadedData {
+                    loadQuizData()
+            hasLoadedData = true
+            // Refresh table to show quizzes.
+                        tableView.reloadData()
+                    }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allQuizzes.count
@@ -25,20 +36,37 @@ class QuizLibraryViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell", for: indexPath)
-        cell.textLabel?.text = allQuizzes[indexPath.row].quizTitle
-        cell.detailTextLabel?.text = allQuizzes[indexPath.row].quizDescription
-        cell.imageView?.image = allQuizzes[indexPath.row].quizCoverImage
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell", for: indexPath) as! AllQuizzesTableViewCell
+        
+        //getting quiz data ready
+        let quiz = allQuizzes[indexPath.row]
+        
+        //configure custom cell's outlets
+        cell.quizTitleLabel.text = quiz.quizTitle
+        cell.quizDescriptionLabel.text = quiz.quizDescription
+        cell.quizImageView.image = quiz.quizCoverImage
+        
+        //makes image fill image view nicely
+        cell.quizImageView.contentMode = .scaleAspectFill
+        cell.quizImageView.clipsToBounds = true
         return cell
     }
     
-    private func registerTableViewCells(){
-        let textFieldCell = UINib(nibName: "AllQuizesTableViewCell",
-                                     bundle: nil)
-           self.tableView.register(textFieldCell,
-                                   forCellReuseIdentifier: "AllQuizzesTableViewCell")
+    //handles what happens when the user taps a row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Tap works")
+        //deselect the row so it doesn't stay highlighted
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            if let quizVC = storyboard?.instantiateViewController(withIdentifier: "QuizViewController") as? QuizViewController {
+                quizVC.quiz = allQuizzes[indexPath.row]
+                navigationController?.pushViewController(quizVC, animated: true)
+            }
+        
     }
     
+
+    // perpares QuizViewController before segue happens
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowQuiz",
            let quizVC = segue.destination as? QuizViewController,
@@ -49,33 +77,22 @@ class QuizLibraryViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //        let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell", for: indexPath)
-    //
-    //        let quiz = allQuizzes[indexPath.row]
-    //        cell.textLabel?.text = quiz.quizTitle
-    //        cell.detailTextLabel?.text = quiz.quizDescription
-    //        cell.imageView?.image = quiz.quizCoverImage
-    //        cell.imageView?.contentMode = .scaleAspectFill
-    //
-    //        return cell
-    //    }
-    //}
-    //
-    //extension QuizLibraryViewController: UITableViewDelegate {
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        tableView.deselectRow(at: indexPath, animated: true)
-    //    }
-    //}
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: "AllQuizzesTableViewCell", bundle: nil) // 1. calling CustomTableViewCell.xib
-          self.tableView.register(nib, forCellReuseIdentifier: "QuizCell") // 2. register to the NewTableView
-        
+        //registers the custom cell
+//        let nib = UINib(nibName: "AllQuizzesTableViewCell", bundle: nil) // 1. calling CustomTableViewCell.xib
+//          self.tableView.register(nib, forCellReuseIdentifier: "QuizCell") // 2. register to the NewTableView
+//        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 100  //space for image + text
-    
+    loadQuizDataIfNeeded()
+        tableView.register(UINib(nibName: "AllQuizzesTableViewCell", bundle: nil),
+                                 forCellReuseIdentifier: "QuizCell")
+               tableView.reloadData()
+
     }
+
 }

@@ -15,7 +15,9 @@ class AllQuizzesTableViewCell: UITableViewCell {
     @IBOutlet weak var quizTitleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // enable selection
+        selectionStyle = .default
+        isUserInteractionEnabled = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
