@@ -54,7 +54,7 @@ class QuizLibraryViewController: UIViewController, UITableViewDelegate, UITableV
     
     //handles what happens when the user taps a row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Tap works")
+        
         //deselect the row so it doesn't stay highlighted
             tableView.deselectRow(at: indexPath, animated: true)
             

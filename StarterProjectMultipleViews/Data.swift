@@ -245,3 +245,46 @@ func loadQuizData() {
 }
 
 
+struct Brain {
+    
+    static var shared = Brain()
+    
+    private let creditsKey = "totalCredits"
+    
+    var totalCredits: Int {
+        get {
+            //start at 10 credits
+            let saved = UserDefaults.standard.integer(forKey: creditsKey)
+                    return saved == 0 ? 10 : saved
+            
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: creditsKey)
+        }
+    }
+    //get the health percentage from credits, maximum is 100
+    var healthPercentage: Int {
+        let raw = min(totalCredits, 100)
+        return raw
+    }
+    
+    //add credits
+    mutating func addCredits(_ amount: Int) {
+        totalCredits += amount
+    }
+    
+    func brainImageName() -> String {
+        let health = healthPercentage
+        if health <= 50 {
+            // if health is 0-50, then it's poor
+            return "brainPoor"
+        } else if health <= 74 {
+            //if health is 51-74, then it's normal
+            return "brainNormal"
+        } else {
+            //if health is 75-100 then it's strong
+            return "brainStrong"
+        }
+    }
+}
+

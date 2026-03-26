@@ -31,7 +31,10 @@ class ViewControllerOne: UIViewController{
     
     // MARK: - IBOutlets
    
+    @IBOutlet weak var healthProgressView: UIProgressView!
     
+    @IBOutlet weak var brainImageView: UIImageView!
+    @IBOutlet weak var healthLabel: UILabel!
     
     // MARK: - Variables and Constants
     
@@ -42,10 +45,19 @@ class ViewControllerOne: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         loadQuizData()
+        updateBrain()
     
     }
     
-   
+    private func updateBrain() {
+        let health = Brain.shared.healthPercentage
+        
+        healthLabel.text = "\(health)%"
+        healthProgressView.progress = Float(health) / 100.0
+        
+        let imageName = Brain.shared.brainImageName()
+        brainImageView.image = UIImage(named: imageName)
+    }
     
 }
 

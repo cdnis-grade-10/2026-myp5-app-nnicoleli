@@ -34,12 +34,9 @@ class QuizViewController: UIViewController {
     
     
     func displayQuizData() {
-//        snakeImageView.image = UIImage(named: snakes[currentIndex].photo)
-//        snakeCommonNameLabel.text = snakes[currentIndex].englishCommonName
-//        snakeSpeciesNameLabel.text = snakes[currentIndex].speciesName
-//        snakeLethalityLabel.text = snakes[currentIndex].lethality.rawValue
         progressLabel.text = "Question \(currentQuestionIndex + 1) of \(quiz.questions.count)"
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -146,12 +143,14 @@ class QuizViewController: UIViewController {
             private func showFinalScore() {
                 let message = "You scored \(score) / \(quiz.questions.count)."
 
-                let alert = UIAlertController(title: "Quiz Finished",
+                let alert = UIAlertController(title: "Quiz Finished!",
                                               message: message,
                                               preferredStyle: .alert)
 
                 alert.addAction(UIAlertAction(title: "Done", style: .default) { _ in
-                    self.navigationController?.popViewController(animated: true)
+                    self.presentCreditsPopupForQuiz()
+                    
+                    //self.navigationController?.popViewController(animated: true)
                 })
 
                 alert.addAction(UIAlertAction(title: "Retry", style: .default) { _ in
@@ -162,5 +161,21 @@ class QuizViewController: UIViewController {
 
                 present(alert, animated: true)
             }
-        }
+    
+    private func presentCreditsPopupForQuiz() {
+      //  guard score > 0 else { return }
+        let popup = storyboard?.instantiateViewController(
+            withIdentifier: "CreditsPopupViewController"
+        ) as! CreditsPopupViewController //else { return }
+        
+        popup.creditsEarned = score
+        popup.summaryText = "You answered \(score) question\(score == 1 ? "" : "s") correctly."
+        
+        popup.modalPresentationStyle = .overCurrentContext
+        popup.modalTransitionStyle = .crossDissolve
+        
+        present(popup, animated: true)
+    }
+       
+}
 

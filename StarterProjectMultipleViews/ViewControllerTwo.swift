@@ -53,7 +53,9 @@ class ViewControllerTwo: UIViewController {
         
     }
 
-    
+    private func studiedMinutes() -> Int {
+        return count / 60
+    }
     
     @IBAction func endTapped(_ sender: Any) { //Codes for what will happen when the end button is tapped
         
@@ -64,6 +66,13 @@ class ViewControllerTwo: UIViewController {
             //do nothing
         }))
         alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (_) in
+            
+            
+            //capture the study time
+            let minutes = self.studiedMinutes()
+            //show popup
+            self.presentCreditsPopupForStudy(minutes: minutes)
+            
             // if user selected yes, then reset the timer to its original state
             self.count = 0
             self.timer.invalidate()
@@ -111,5 +120,20 @@ class ViewControllerTwo: UIViewController {
         timeString += " : "
         timeString += String(format:"%02d", seconds)
         return timeString
+    }
+    
+    private func presentCreditsPopupForStudy(minutes: Int) {
+        guard minutes > 0 else { return }
+        guard let popup = storyboard?.instantiateViewController(
+            withIdentifier: "CreditsPopupViewController"
+        ) as? CreditsPopupViewController else { return }
+        
+        popup.creditsEarned = minutes
+        popup.summaryText = "You studied for \(minutes) minute\(minutes == 1 ? "" : "s")."
+        
+        popup.modalPresentationStyle = .overCurrentContext
+        popup.modalTransitionStyle = .crossDissolve
+        
+        present(popup, animated: true, completion: nil)
     }
 }
