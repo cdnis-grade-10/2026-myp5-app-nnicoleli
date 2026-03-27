@@ -15,6 +15,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
     
+    @IBOutlet weak var scoreLabel: UILabel!
     
     //Outlet for buttons
     @IBOutlet weak var optionButton1: UIButton!
@@ -35,6 +36,7 @@ class QuizViewController: UIViewController {
     
     func displayQuizData() {
         progressLabel.text = "Question \(currentQuestionIndex + 1) of \(quiz.questions.count)"
+        scoreLabel.text = "Score: \(score)"
     }
     
     override func viewDidLoad() {
@@ -93,6 +95,9 @@ class QuizViewController: UIViewController {
           }
       }
     
+   
+       
+    
     //what happens when the button is tapped
     @IBAction func optionButtonTapped(_ sender: UIButton) {
         let question = quiz.questions[currentQuestionIndex]
@@ -150,7 +155,7 @@ class QuizViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Done", style: .default) { _ in
                     self.presentCreditsPopupForQuiz()
                     
-                    //self.navigationController?.popViewController(animated: true)
+                    self.navigationController?.popViewController(animated: true)
                 })
 
                 alert.addAction(UIAlertAction(title: "Retry", style: .default) { _ in
@@ -158,15 +163,14 @@ class QuizViewController: UIViewController {
                     self.score = 0
                     self.showCurrentQuestion()
                 })
-
-                present(alert, animated: true)
+                
+                present(alert, animated: true, completion: nil)
             }
     
     private func presentCreditsPopupForQuiz() {
-      //  guard score > 0 else { return }
         let popup = storyboard?.instantiateViewController(
-            withIdentifier: "CreditsPopupViewController"
-        ) as! CreditsPopupViewController //else { return }
+                withIdentifier: "CreditsPopupViewController"
+            ) as! CreditsPopupViewController
         
         popup.creditsEarned = score
         popup.summaryText = "You answered \(score) question\(score == 1 ? "" : "s") correctly."
@@ -174,8 +178,8 @@ class QuizViewController: UIViewController {
         popup.modalPresentationStyle = .overCurrentContext
         popup.modalTransitionStyle = .crossDissolve
         
-        present(popup, animated: true)
+        self.present(popup, animated: true, completion: nil)
     }
-       
+  
 }
 

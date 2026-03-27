@@ -26,19 +26,21 @@
  */
 
 import UIKit
+import AVFoundation //for audio
 
 class ViewControllerOne: UIViewController{
     
     // MARK: - IBOutlets
    
     @IBOutlet weak var healthProgressView: UIProgressView!
-    
     @IBOutlet weak var brainImageView: UIImageView!
     @IBOutlet weak var healthLabel: UILabel!
     
     // MARK: - Variables and Constants
     
-
+    var backgroundMusic: AVAudioPlayer?
+    
+    
     
     // MARK: - IBActions and Functions
     
@@ -46,9 +48,24 @@ class ViewControllerOne: UIViewController{
         super.viewDidLoad()
         loadQuizData()
         updateBrain()
+        playMusic()
     
     }
     
+    func playMusic (){
+        let path = Bundle.main.path(forResource:"music.mp3", ofType: nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            backgroundMusic = try AVAudioPlayer(contentsOf: url)
+            backgroundMusic?.numberOfLoops = -1 //infinite loops
+            backgroundMusic?.play()
+        } catch {
+            // couldn't load file
+        }
+        
+                
+    }
     private func updateBrain() {
         let health = Brain.shared.healthPercentage
         
@@ -59,5 +76,12 @@ class ViewControllerOne: UIViewController{
         brainImageView.image = UIImage(named: imageName)
     }
     
+    @IBAction func musicSwitch(_ sender: Any) {
+        if ((sender as AnyObject).isOn == true){
+            playMusic()
+        }else {
+            backgroundMusic?.stop()
+            }
+        }
 }
 

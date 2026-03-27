@@ -123,10 +123,9 @@ class ViewControllerTwo: UIViewController {
     }
     
     private func presentCreditsPopupForStudy(minutes: Int) {
-        guard minutes > 0 else { return }
-        guard let popup = storyboard?.instantiateViewController(
+        let popup = storyboard?.instantiateViewController(
             withIdentifier: "CreditsPopupViewController"
-        ) as? CreditsPopupViewController else { return }
+        ) as! CreditsPopupViewController
         
         popup.creditsEarned = minutes
         popup.summaryText = "You studied for \(minutes) minute\(minutes == 1 ? "" : "s")."
@@ -134,6 +133,6 @@ class ViewControllerTwo: UIViewController {
         popup.modalPresentationStyle = .overCurrentContext
         popup.modalTransitionStyle = .crossDissolve
         
-        present(popup, animated: true, completion: nil)
+        self.present(popup, animated: true, completion: nil)
     }
 }

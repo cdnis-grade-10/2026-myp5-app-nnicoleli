@@ -288,3 +288,16 @@ struct Brain {
     }
 }
 
+
+struct Note {
+    let title: String
+    let body: String
+}
+
+let preMadeNotes: [Note] = [
+    Note(title: "Photosynthesis", body: "Key equation: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ (light energy)\n\n• Light-dependent: Chloroplast thylakoids, photolysis of water, ATP/NADPH produced\n• Light-independent (Calvin cycle): Stroma, CO₂ fixation (RuBisCO), reduction, regeneration\nFactors: Light intensity, CO₂ concentration, temperature"),
+    
+    Note(title: "Cell Respiration", body: "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP\n\n• Glycolysis: Cytoplasm, glucose → 2 pyruvate, net 2 ATP\n• Link reaction: Pyruvate → Acetyl CoA (mitochondria matrix)\n• Krebs cycle: Matrix, Acetyl CoA → CO₂ + reduced NAD/FAD\n• Oxidative phosphorylation: Inner membrane, chemiosmosis, ~34 ATP\nTotal yield: ~38 ATP/glucose"),
+    
+    Note(title: "Natural Selection", body: "Darwin's theory:\n\n1. Variation exists in populations\n2. More offspring produced than can survive\n3. Struggle for existence → differential survival\n4. Best adapted survive/reproduce (natural selection)\n5. Offspring inherit advantageous traits → adaptation\n\nEvidence: Fossil record, homologous structures, antibiotic resistance")
+]

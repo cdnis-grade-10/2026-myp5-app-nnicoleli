@@ -24,6 +24,7 @@
 		BB82FD1B2F6AF4E100BFB0F1 /* App Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB82FD1A2F6AF4E100BFB0F1 /* App Data.swift */; };
 		BB82FD222F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB82FD202F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.swift */; };
 		BB82FD232F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82FD212F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.xib */; };
+		BBFECE8E2F76DF13007F4956 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBFECE8D2F76DF12007F4956 /* music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		BB82FD1A2F6AF4E100BFB0F1 /* App Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Data.swift"; sourceTree = "<group>"; };
 		BB82FD202F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizzesTableViewCell.swift; sourceTree = "<group>"; };
 		BB82FD212F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllQuizzesTableViewCell.xib; sourceTree = "<group>"; };
+		BBFECE8D2F76DF12007F4956 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		120E289527DAFAF4000129B5 /* StarterProjectMultipleViews */ = {
 			isa = PBXGroup;
 			children = (
+				BBFECE8D2F76DF12007F4956 /* music.mp3 */,
 				120E289627DAFAF4000129B5 /* AppDelegate.swift */,
 				120E289827DAFAF4000129B5 /* SceneDelegate.swift */,
 				120E289A27DAFAF4000129B5 /* ViewControllerOne.swift */,
@@ -158,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFECE8E2F76DF13007F4956 /* music.mp3 in Resources */,
 				120E28A327DAFAF6000129B5 /* LaunchScreen.storyboard in Resources */,
 				120E28A027DAFAF6000129B5 /* Assets.xcassets in Resources */,
 				120E289E27DAFAF4000129B5 /* Main.storyboard in Resources */,

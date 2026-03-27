@@ -31,14 +31,13 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
     
     // MARK: - IBOutlets
     @IBOutlet var table: UITableView!
-    @IBOutlet var label: UILabel!
     
     
     // MARK: - Variables and Constants
     //array of tuples
-    var models: [(title: String, note: String)] = []
+    //var models: [(title: String, note: String)] = []
     
-    
+    var models: [Note] = []
     
     // MARK: - IBActions and Functions
     
@@ -50,7 +49,14 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
         table.delegate = self
         table.dataSource = self
         title = "Notes"
+        self.table.isHidden = false
+        setupPreMadeNotes()
         
+    }
+    
+    private func setupPreMadeNotes() {
+        models = preMadeNotes
+        table.reloadData()
     }
     
     @IBAction func didTapNewNote() {
@@ -61,9 +67,7 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.completion = { noteTitle, note in
             self.navigationController?.popToRootViewController(animated: true)
-            self.models.append((title: noteTitle, note: note))
-            self.label.isHidden = true
-            self.table.isHidden = false
+            self.models.append(Note(title: noteTitle, body: note))
             self.table.reloadData()
         }
         navigationController?.pushViewController(vc, animated: true)
@@ -77,9 +81,16 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = models[indexPath.row].title
-        cell.detailTextLabel?.text = models[indexPath.row].note
+        cell.detailTextLabel?.text = models[indexPath.row].body
+        
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 12)
+        
         return cell
         
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -95,7 +106,7 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.title = "Note"
         vc.noteTitle = model.title
-        vc.note = model.note
+        vc.note = model.body
         navigationController?.pushViewController(vc, animated: true)
     }
 }
