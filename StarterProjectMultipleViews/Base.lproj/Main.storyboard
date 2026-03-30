@@ -16,76 +16,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Study today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdo-6y-Gq3">
-                                <rect key="frame" x="167" y="214" width="100" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechBox" translatesAutoresizingMaskIntoConstraints="NO" id="egU-w8-Dhv">
+                                <rect key="frame" x="-277" y="99" width="989" height="629"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWN-WL-R6H">
-                                <rect key="frame" x="81" y="317" width="68" height="35"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brainStrong" translatesAutoresizingMaskIntoConstraints="NO" id="AoW-XU-cPc">
+                                <rect key="frame" x="-22" y="441" width="479" height="390"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Timer"/>
-                                <connections>
-                                    <segue destination="Dhs-9s-nZ9" kind="show" id="vlh-YB-iRc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAr-Bz-Ca3">
-                                <rect key="frame" x="185" y="317" width="70" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Notes"/>
-                                <connections>
-                                    <segue destination="Pf6-Zn-bo0" kind="show" id="dbX-Mi-obb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E22-z0-Tac">
-                                <rect key="frame" x="301" y="317" width="59" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Quiz"/>
-                                <connections>
-                                    <segue destination="DQ3-YQ-H5V" kind="show" id="MQu-tO-Irg"/>
-                                </connections>
-                            </button>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slZ-7c-FCF">
-                                <rect key="frame" x="230" y="736" width="42" height="57"/>
+                                <rect key="frame" x="226" y="763" width="42" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wJw-K7-7wK">
-                                <rect key="frame" x="35" y="789" width="378" height="4"/>
+                                <rect key="frame" x="35" y="808" width="378" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brain Health Percentage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcY-ME-FYP">
-                                <rect key="frame" x="33" y="754" width="189" height="21"/>
+                                <rect key="frame" x="33" y="773" width="182" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appTitle" translatesAutoresizingMaskIntoConstraints="NO" id="mi9-eU-DDD">
+                                <rect key="frame" x="-25" y="-22" width="492" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bIL-tF-PZ7">
-                                <rect key="frame" x="359" y="247" width="61" height="28"/>
+                                <rect key="frame" x="354" y="839" width="61" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="musicSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="nz0-cW-SSQ"/>
                                 </connections>
                             </switch>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appTitle" translatesAutoresizingMaskIntoConstraints="NO" id="mi9-eU-DDD">
-                                <rect key="frame" x="-25" y="-22" width="492" height="343"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWN-WL-R6H">
+                                <rect key="frame" x="65" y="354" width="78" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Timer">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Dhs-9s-nZ9" kind="show" id="vlh-YB-iRc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAr-Bz-Ca3">
+                                <rect key="frame" x="161" y="364" width="111" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Notes">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Pf6-Zn-bo0" kind="show" id="dbX-Mi-obb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E22-z0-Tac">
+                                <rect key="frame" x="308" y="355" width="66" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Quiz">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="DQ3-YQ-H5V" kind="show" id="MQu-tO-Irg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="IZb-5U-w9B">
+                                <rect key="frame" x="-16" y="255" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AoW-XU-cPc">
-                                <rect key="frame" x="-22" y="435" width="479" height="390"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quizIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vZm-Aw-PF4">
+                                <rect key="frame" x="236" y="264" width="210" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="I6k-ee-3ni">
+                                <rect key="frame" x="148" y="275" width="139" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFj-M1-e2g">
+                                <rect key="frame" x="299" y="843" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.7749023438" green="0.8666992188" blue="0.9477539062" alpha="0.77272227112676062" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.8237304688" green="0.8940429688" blue="0.95703125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="RvT-yz-Sxk"/>
                     <connections>
@@ -103,7 +128,7 @@
             <objects>
                 <viewController id="DQ3-YQ-H5V" customClass="QuizLibraryViewController" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mAT-4g-98G">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="884"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QUIZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xey-50-Ano">
@@ -162,52 +187,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="question label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKz-8j-Xq8">
-                                <rect key="frame" x="94" y="208" width="246" height="96"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quizBrain" translatesAutoresizingMaskIntoConstraints="NO" id="ulx-Tk-g9M">
+                                <rect key="frame" x="-197" y="150" width="828" height="556"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="question label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKz-8j-Xq8">
+                                <rect key="frame" x="54" y="208" width="339" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="22"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xx/xx" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP4-HX-z0A">
                                 <rect key="frame" x="54" y="125" width="163" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="19"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yc-Er-HHR">
-                                <rect key="frame" x="227" y="508" width="175" height="90"/>
+                                <rect key="frame" x="227" y="591" width="175" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9838867188" green="0.9838867188" blue="0.9838867188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="option b"/>
+                                <buttonConfiguration key="configuration" style="plain" title="option b">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="optionButtonTapped:" destination="bt8-gR-hfz" eventType="touchUpInside" id="SnX-sa-n29"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfy-Ze-kaU">
-                                <rect key="frame" x="44" y="623" width="163" height="107"/>
+                                <rect key="frame" x="44" y="706" width="163" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9838867188" green="0.9838867188" blue="0.9838867188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="option c"/>
+                                <buttonConfiguration key="configuration" style="plain" title="option c">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="optionButtonTapped:" destination="bt8-gR-hfz" eventType="touchUpInside" id="Gm9-ZN-wjo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-vg-hzd">
-                                <rect key="frame" x="227" y="623" width="175" height="107"/>
+                                <rect key="frame" x="227" y="706" width="175" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9838867188" green="0.9838867188" blue="0.9838867188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="option d"/>
+                                <buttonConfiguration key="configuration" style="plain" title="option d">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="optionButtonTapped:" destination="bt8-gR-hfz" eventType="touchUpInside" id="q5b-x1-AV0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiH-kI-KxY">
-                                <rect key="frame" x="44" y="508" width="163" height="90"/>
+                                <rect key="frame" x="44" y="591" width="163" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9838867188" green="0.9838867188" blue="0.9838867188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="option a"/>
+                                <buttonConfiguration key="configuration" style="plain" title="option a">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="optionButtonTapped:" destination="bt8-gR-hfz" eventType="touchUpInside" id="LHj-YW-h2h"/>
                                 </connections>
@@ -215,14 +261,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiE-qj-Bt0">
                                 <rect key="frame" x="288" y="134" width="152" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="19"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulx-Tk-g9M">
-                                <rect key="frame" x="72" y="299" width="290" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4bZ-1r-msd"/>
                         <color key="backgroundColor" red="0.88069745131582389" green="0.9575195312" blue="0.90925973654918779" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -250,39 +292,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcM-yC-fh7">
-                                <rect key="frame" x="56" y="371" width="138" height="35"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="readingBrain" translatesAutoresizingMaskIntoConstraints="NO" id="x2W-hC-TSR">
+                                <rect key="frame" x="-214" y="238" width="868" height="787"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcM-yC-fh7">
+                                <rect key="frame" x="56" y="362" width="138" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="START"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="startPauseTapped:" destination="Dhs-9s-nZ9" eventType="touchUpInside" id="ThY-1c-fD2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJG-Zt-hun">
-                                <rect key="frame" x="247" y="371" width="138" height="35"/>
+                                <rect key="frame" x="247" y="362" width="138" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="END"/>
+                                <buttonConfiguration key="configuration" style="plain" title="END">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="endTapped:" destination="Dhs-9s-nZ9" eventType="touchUpInside" id="hed-6y-RhU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAK-tN-KjM">
-                                <rect key="frame" x="33" y="258" width="374" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timerTitle" translatesAutoresizingMaskIntoConstraints="NO" id="xHv-3m-Xp9">
                                 <rect key="frame" x="81" y="64" width="285" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brainStrong" translatesAutoresizingMaskIntoConstraints="NO" id="x2W-hC-TSR">
-                                <rect key="frame" x="-91" y="350" width="625" height="615"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAK-tN-KjM">
+                                <rect key="frame" x="8" y="238" width="424" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="85"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gA4-P0-ACM"/>
                         <color key="backgroundColor" red="0.82421875" green="0.89453125" blue="0.9575195312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -377,14 +428,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="pv7-4J-TWK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LfJ-E9-ujx">
                                 <rect key="frame" x="10" y="196" width="420" height="682"/>
                                 <color key="backgroundColor" red="0.9838867188" green="0.9838867188" blue="0.9838867188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -422,7 +473,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Iyd-ag-Olu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -430,7 +481,7 @@
                                 <rect key="frame" x="10" y="204" width="420" height="674"/>
                                 <color key="backgroundColor" red="0.8969726562" green="0.9462890625" blue="0.9794921875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -466,20 +517,27 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n8W-OV-xPn">
                                 <rect key="frame" x="48" y="228" width="353" height="501"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.8247070312" green="0.8950195312" blue="0.9580078125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="5f4-52-8Yz" kind="embed" id="shx-vh-sjZ"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nice Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIj-3P-vwz">
-                                <rect key="frame" x="119" y="272" width="223" height="42"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feedbackBrain" translatesAutoresizingMaskIntoConstraints="NO" id="jXo-yP-JXK">
+                                <rect key="frame" x="-39" y="313" width="517" height="333"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nice Work" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIj-3P-vwz">
+                                <rect key="frame" x="69" y="272" width="311" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bep-f0-aic">
-                                <rect key="frame" x="187" y="586" width="114" height="35"/>
+                                <rect key="frame" x="153" y="654" width="143" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="house.fill" catalog="system" title="Home"/>
                                 <connections>
@@ -488,10 +546,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLU-yH-Ish">
-                                <rect key="frame" x="119" y="377" width="237" height="143"/>
+                                <rect key="frame" x="83" y="549" width="288" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -507,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGc-Bv-ruR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048" y="-1198"/>
+            <point key="canvasLocation" x="2046.818181818182" y="-1198.1171548117156"/>
         </scene>
         <!--Notes-->
         <scene sceneID="zZh-os-ozo">
@@ -606,20 +664,27 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vRO-cw-Xnx"/>
+        <segue reference="dbX-Mi-obb"/>
         <segue reference="vlh-YB-iRc"/>
-        <segue reference="oWa-7t-ew8"/>
-        <segue reference="MEE-uK-98c"/>
+        <segue reference="MQu-tO-Irg"/>
+        <segue reference="lEY-nX-2WG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appTitle" width="748.33331298828125" height="529"/>
         <image name="brainStrong" width="682.66668701171875" height="682.66668701171875"/>
+        <image name="feedbackBrain" width="2048" height="2048"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="lightbulb.min" catalog="system" width="115" height="128"/>
+        <image name="notesIcon" width="529" height="748.33331298828125"/>
         <image name="notesTitle" width="748.33331298828125" height="529"/>
+        <image name="quizBrain" width="2048" height="2048"/>
+        <image name="quizIcon" width="529" height="748.33331298828125"/>
         <image name="quizTitle" width="748.33331298828125" height="529"/>
+        <image name="readingBrain" width="2048" height="2048"/>
+        <image name="speechBox" width="529" height="748.33331298828125"/>
         <image name="square.and.pencil" catalog="system" width="128" height="121"/>
         <image name="timer" catalog="system" width="128" height="123"/>
+        <image name="timerIcon" width="529" height="748.33331298828125"/>
         <image name="timerTitle" width="748.33331298828125" height="529"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
