@@ -25,6 +25,7 @@ class ViewControllerFive: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     
+        //displays the note title and the body
         titleLabel.text = noteTitle
         noteLabel.text = note
     }

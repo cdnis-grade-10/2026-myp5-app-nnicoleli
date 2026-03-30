@@ -52,6 +52,7 @@ class ViewControllerOne: UIViewController{
     
     }
     
+    //plays background music
     func playMusic (){
         let path = Bundle.main.path(forResource:"music.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
@@ -66,6 +67,8 @@ class ViewControllerOne: UIViewController{
         
                 
     }
+    
+    //updates the brain illustration depending on the health percentage
     private func updateBrain() {
         let health = Brain.shared.healthPercentage
         
@@ -76,6 +79,7 @@ class ViewControllerOne: UIViewController{
         brainImageView.image = UIImage(named: imageName)
     }
     
+    //allows user to switch the music on and off
     @IBAction func musicSwitch(_ sender: Any) {
         if ((sender as AnyObject).isOn == true){
             playMusic()

@@ -54,12 +54,15 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
+    //loads the pre-made notes thats stored in the data file
     private func setupPreMadeNotes() {
         models = preMadeNotes
         table.reloadData()
     }
     
+    //what happens when the new note button is tapped
     @IBAction func didTapNewNote() {
+        //goes to view controller four
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "new") as? ViewControllerFour else {
             return
         }
@@ -83,6 +86,7 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
         cell.textLabel?.text = models[indexPath.row].title
         cell.detailTextLabel?.text = models[indexPath.row].body
         
+        //fonts and sizes of the text in the cell
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 12)
         
@@ -98,8 +102,8 @@ class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         let model = models[indexPath.row]
-        //Show note controller
         
+        //Show note controller
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "note")as? ViewControllerFive else {
             return
         }

@@ -53,9 +53,11 @@ class ViewControllerTwo: UIViewController {
         
     }
 
+    //tracks the minutes studied
     private func studiedMinutes() -> Int {
         return count / 60
     }
+    
     
     @IBAction func endTapped(_ sender: Any) { //Codes for what will happen when the end button is tapped
         
@@ -84,7 +86,10 @@ class ViewControllerTwo: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    
+    //what happens when the start button is tapped
     @IBAction func startPauseTapped(_ sender: Any) {
+        // user can pause and start the time4r
         if(timerCounting){
           timerCounting = false
             timer.invalidate()
@@ -97,7 +102,7 @@ class ViewControllerTwo: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 1,target:self, selector:#selector(timerCounter), userInfo: nil, repeats: true)
         }
     }
-    
+
     @objc func timerCounter() -> Void {
         count = count + 1
         let time = secondsToHoursMinutesSeconds(seconds: count)
@@ -122,6 +127,7 @@ class ViewControllerTwo: UIViewController {
         return timeString
     }
     
+    //goes to the popup view controller to display feedback
     private func presentCreditsPopupForStudy(minutes: Int) {
         let popup = storyboard?.instantiateViewController(
             withIdentifier: "CreditsPopupViewController"

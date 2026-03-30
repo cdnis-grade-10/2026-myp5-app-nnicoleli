@@ -15,7 +15,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
     
-    @IBOutlet weak var scoreLabel: UILabel!
+
     
     //Outlet for buttons
     @IBOutlet weak var optionButton1: UIButton!
@@ -36,7 +36,6 @@ class QuizViewController: UIViewController {
     
     func displayQuizData() {
         progressLabel.text = "Question \(currentQuestionIndex + 1) of \(quiz.questions.count)"
-        scoreLabel.text = "Score: \(score)"
     }
     
     override func viewDidLoad() {
@@ -146,6 +145,7 @@ class QuizViewController: UIViewController {
             }
 
             private func showFinalScore() {
+                //alert pops up
                 let message = "You scored \(score) / \(quiz.questions.count)."
 
                 let alert = UIAlertController(title: "Quiz Finished!",
@@ -167,6 +167,7 @@ class QuizViewController: UIViewController {
                 present(alert, animated: true, completion: nil)
             }
     
+    //goes to feedback pop up view 
     private func presentCreditsPopupForQuiz() {
         let popup = storyboard?.instantiateViewController(
                 withIdentifier: "CreditsPopupViewController"

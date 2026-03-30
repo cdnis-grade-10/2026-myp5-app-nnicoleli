@@ -35,7 +35,7 @@ class CreditsPopupViewController: UIViewController {
         feedbackContainerView.clipsToBounds = true
         
         //configure labels
-        feedbackTitleLabel.text = "Congrats, session complete!"
+        feedbackTitleLabel.text = "Congrats!"
         feedbackDetailLabel.text = "\(summaryText) You earned \(creditsEarned) credits!"
         
         //update brain credits
