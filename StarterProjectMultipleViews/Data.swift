@@ -256,7 +256,7 @@ struct Brain {
         get {
             
             //to reset the settings:
-            UserDefaults.standard.removeObject(forKey: creditsKey)
+            //UserDefaults.standard.removeObject(forKey: creditsKey)
             
             //start at 10 credits
             let saved = UserDefaults.standard.integer(forKey: creditsKey)
