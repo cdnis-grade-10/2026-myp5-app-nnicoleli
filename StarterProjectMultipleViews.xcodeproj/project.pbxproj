@@ -21,7 +21,6 @@
 		BB70AE602F5E9FB0007DB299 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB70AE5F2F5E9FB0007DB299 /* QuizViewController.swift */; };
 		BB70AE662F612E8E007DB299 /* QuizLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB70AE652F612E8E007DB299 /* QuizLibraryViewController.swift */; };
 		BB70AE682F612FA2007DB299 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB70AE672F612FA2007DB299 /* Data.swift */; };
-		BB82FD1B2F6AF4E100BFB0F1 /* App Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB82FD1A2F6AF4E100BFB0F1 /* App Data.swift */; };
 		BB82FD222F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB82FD202F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.swift */; };
 		BB82FD232F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82FD212F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.xib */; };
 		BBFECE8E2F76DF13007F4956 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBFECE8D2F76DF12007F4956 /* music.mp3 */; };
@@ -44,7 +43,6 @@
 		BB70AE5F2F5E9FB0007DB299 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		BB70AE652F612E8E007DB299 /* QuizLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLibraryViewController.swift; sourceTree = "<group>"; };
 		BB70AE672F612FA2007DB299 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		BB82FD1A2F6AF4E100BFB0F1 /* App Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Data.swift"; sourceTree = "<group>"; };
 		BB82FD202F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuizzesTableViewCell.swift; sourceTree = "<group>"; };
 		BB82FD212F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllQuizzesTableViewCell.xib; sourceTree = "<group>"; };
 		BBFECE8D2F76DF12007F4956 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				120E289C27DAFAF4000129B5 /* Main.storyboard */,
 				BB3F79192F756648008EE474 /* CreditsPopupViewController.swift */,
 				BB70AE672F612FA2007DB299 /* Data.swift */,
-				BB82FD1A2F6AF4E100BFB0F1 /* App Data.swift */,
 				BB70AE652F612E8E007DB299 /* QuizLibraryViewController.swift */,
 				BB70AE5F2F5E9FB0007DB299 /* QuizViewController.swift */,
 				BB40E4D42F5C09FB005F3FC3 /* ViewControllerFive.swift */,
@@ -182,7 +179,6 @@
 				BB40E4D32F5C09E5005F3FC3 /* ViewControllerFour.swift in Sources */,
 				BB70AE602F5E9FB0007DB299 /* QuizViewController.swift in Sources */,
 				BB70AE662F612E8E007DB299 /* QuizLibraryViewController.swift in Sources */,
-				BB82FD1B2F6AF4E100BFB0F1 /* App Data.swift in Sources */,
 				BB82FD222F6BC9F700BFB0F1 /* AllQuizzesTableViewCell.swift in Sources */,
 				BB3F791A2F756649008EE474 /* CreditsPopupViewController.swift in Sources */,
 				121E32872817B5A200DC59D4 /* ViewControllerThree.swift in Sources */,

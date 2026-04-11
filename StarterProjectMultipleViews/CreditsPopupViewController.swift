@@ -21,7 +21,7 @@ class CreditsPopupViewController: UIViewController {
 
     var creditsEarned: Int = 0
     var summaryText: String = ""
-    
+    var onDismiss: (() -> Void)?
     // MARK: - IBActions and Functions
 
     override func viewDidLoad() {
@@ -40,16 +40,24 @@ class CreditsPopupViewController: UIViewController {
         
         //update brain credits
         Brain.shared.addCredits(creditsEarned)
+        
     }
     
     
-    @IBAction func homeButtonTapped(_ sender: Any) {
+   @IBAction func homeButtonTapped(_ sender: Any) {
         
         //dissmiss the popup
         dismiss(animated: true)
-        
-        //go back to home screen
-        self.navigationController?.popToRootViewController(animated:true)
+       self.onDismiss?()
+       if let navVC = self.presentingViewController as? UINavigationController {
+           for vc in navVC.viewControllers {
+               if vc is ViewControllerOne {
+                   navVC.popToViewController(vc, animated: true)
+                   break
+               }
+           }
+       }
+      
     }
     
     

@@ -39,18 +39,16 @@ class ViewControllerOne: UIViewController{
     // MARK: - Variables and Constants
     
     var backgroundMusic: AVAudioPlayer?
-    
-    
-    
     // MARK: - IBActions and Functions
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadQuizData()
         updateBrain()
-        playMusic()
     
     }
+    
     
     //plays background music
     func playMusic (){
@@ -67,6 +65,7 @@ class ViewControllerOne: UIViewController{
         
                 
     }
+    
     
     //updates the brain illustration depending on the health percentage
     private func updateBrain() {
@@ -87,5 +86,8 @@ class ViewControllerOne: UIViewController{
             backgroundMusic?.stop()
             }
         }
+    
+    @IBAction func unwindToHome(_ segue: UIStoryboardSegue) {}
+    
 }
 

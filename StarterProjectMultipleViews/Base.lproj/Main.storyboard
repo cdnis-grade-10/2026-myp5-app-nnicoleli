@@ -128,7 +128,7 @@
             <objects>
                 <viewController id="DQ3-YQ-H5V" customClass="QuizLibraryViewController" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mAT-4g-98G">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="884"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QUIZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xey-50-Ano">
@@ -534,7 +534,8 @@
                                 <buttonConfiguration key="configuration" style="plain" image="house.fill" catalog="system" title="Home"/>
                                 <connections>
                                     <action selector="homeButtonTapped:" destination="Lin-HN-djG" eventType="touchUpInside" id="y9Z-o4-rgz"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="lEY-nX-2WG"/>
+                                    <action selector="unwindToHome:" destination="SyT-7C-LyO" eventType="touchUpInside" id="jNf-MT-qiA"/>
+                                    <segue destination="SyT-7C-LyO" kind="unwind" unwindAction="unwindToHome:" id="GvE-wc-rDF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLU-yH-Ish">
@@ -556,6 +557,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGc-Bv-ruR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="SyT-7C-LyO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2046.818181818182" y="-1198.1171548117156"/>
         </scene>
@@ -641,6 +643,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sVj-Q7-U1p" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="jGg-W3-NPJ"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9L7-7T-JvJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sZ3-tY-9at">
                         <rect key="frame" x="0.0" y="124" width="440" height="54"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -659,7 +662,6 @@
         <segue reference="dbX-Mi-obb"/>
         <segue reference="vlh-YB-iRc"/>
         <segue reference="MQu-tO-Irg"/>
-        <segue reference="lEY-nX-2WG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appTitle" width="748.33331298828125" height="529"/>

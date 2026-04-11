@@ -250,9 +250,14 @@ struct Brain {
     static var shared = Brain()
     
     private let creditsKey = "totalCredits"
+  
     
     var totalCredits: Int {
         get {
+            
+            //to reset the settings:
+            //UserDefaults.standard.removeObject(forKey: creditsKey)
+            
             //start at 10 credits
             let saved = UserDefaults.standard.integer(forKey: creditsKey)
                     return saved == 0 ? 10 : saved
