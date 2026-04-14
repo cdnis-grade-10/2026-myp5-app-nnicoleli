@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hvz-q9-XZJ">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,48 +13,676 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewControllerOne" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speechBox" translatesAutoresizingMaskIntoConstraints="NO" id="egU-w8-Dhv">
+                                <rect key="frame" x="-277" y="99" width="989" height="629"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brainStrong" translatesAutoresizingMaskIntoConstraints="NO" id="AoW-XU-cPc">
+                                <rect key="frame" x="-22" y="441" width="479" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slZ-7c-FCF">
+                                <rect key="frame" x="226" y="763" width="42" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wJw-K7-7wK">
+                                <rect key="frame" x="35" y="808" width="378" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brain Health Percentage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcY-ME-FYP">
+                                <rect key="frame" x="33" y="775" width="182" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appTitle" translatesAutoresizingMaskIntoConstraints="NO" id="mi9-eU-DDD">
+                                <rect key="frame" x="-25" y="-22" width="492" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bIL-tF-PZ7">
+                                <rect key="frame" x="353" y="837" width="61" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="musicSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="nz0-cW-SSQ"/>
+                                </connections>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="IZb-5U-w9B">
+                                <rect key="frame" x="-16" y="255" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quizIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vZm-Aw-PF4">
+                                <rect key="frame" x="236" y="264" width="210" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="I6k-ee-3ni">
+                                <rect key="frame" x="148" y="275" width="139" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWN-WL-R6H">
+                                <rect key="frame" x="65" y="275" width="78" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Timer">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Dhs-9s-nZ9" kind="show" id="vlh-YB-iRc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAr-Bz-Ca3">
+                                <rect key="frame" x="161" y="277" width="111" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Notes">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Pf6-Zn-bo0" kind="show" id="dbX-Mi-obb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E22-z0-Tac">
+                                <rect key="frame" x="308" y="268" width="66" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Quiz">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="DQ3-YQ-H5V" kind="show" id="MQu-tO-Irg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFj-M1-e2g">
+                                <rect key="frame" x="298" y="841" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.8237304688" green="0.8940429688" blue="0.95703125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RvT-yz-Sxk"/>
+                    <connections>
+                        <outlet property="brainImageView" destination="AoW-XU-cPc" id="gKq-l8-tDJ"/>
+                        <outlet property="healthLabel" destination="slZ-7c-FCF" id="2Od-17-xoH"/>
+                        <outlet property="healthProgressView" destination="wJw-K7-7wK" id="GOu-yv-Ue8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="84"/>
+            <point key="canvasLocation" x="1343.1818181818182" y="-464.43514644351467"/>
         </scene>
-        <!--View Controller Two-->
+        <!--Quiz-->
+        <scene sceneID="DJc-Iw-gOg">
+            <objects>
+                <viewController id="DQ3-YQ-H5V" customClass="QuizLibraryViewController" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mAT-4g-98G">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QUIZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xey-50-Ano">
+                                <rect key="frame" x="180" y="-57" width="81" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2tO-tr-1LW">
+                                <rect key="frame" x="0.0" y="201" width="440" height="616"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8247070312" green="0.8950195312" blue="0.9580078125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="124" id="ZOW-l6-GBn">
+                                        <rect key="frame" x="0.0" y="50" width="440" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZOW-l6-GBn" id="3LL-qU-juo">
+                                            <rect key="frame" x="0.0" y="0.0" width="440" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8247070312" green="0.8950195312" blue="0.9580078125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <segue destination="bt8-gR-hfz" kind="presentation" identifier="ShowQuiz" modalPresentationStyle="fullScreen" id="1uD-Vk-slQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mAT-4g-98G" id="azz-XR-Jp7"/>
+                                    <outlet property="delegate" destination="mAT-4g-98G" id="bEg-UK-pB4"/>
+                                </connections>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quizTitle" translatesAutoresizingMaskIntoConstraints="NO" id="kmf-KI-N4l">
+                                <rect key="frame" x="100" y="70" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7gj-aE-swE"/>
+                        <color key="backgroundColor" red="0.8247070312" green="0.8950195312" blue="0.9580078125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="lightbulb.min" catalog="system" id="NLT-FE-Uvp"/>
+                    <navigationItem key="navigationItem" id="jFa-x2-j4V"/>
+                    <connections>
+                        <outlet property="tableView" destination="2tO-tr-1LW" id="wu0-66-63H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CG9-ce-eWz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408.6363636363637" y="286.82008368200837"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="Eok-57-0fA">
+            <objects>
+                <viewController storyboardIdentifier="QuizViewController" id="bt8-gR-hfz" customClass="QuizViewController" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nq0-2V-wUf">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quizBrain" translatesAutoresizingMaskIntoConstraints="NO" id="ulx-Tk-g9M">
+                                <rect key="frame" x="-197" y="150" width="828" height="556"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="question label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKz-8j-Xq8">
+                                <rect key="frame" x="54" y="208" width="339" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="22"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yc-Er-HHR">
+                                <rect key="frame" x="227" y="591" width="175" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9838867188" green="0.9838867188" blue="0.9838867188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="option b">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="optionButtonTapped:" destination="bt8-gR-hfz" eventType="touchUpInside" id="SnX-sa-n29"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfy-Ze-kaU">
+                                <rect key="frame" x="44" y="706" width="163" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9838867188" green="0.9838867188" blue="0.9838867188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="option c">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="optionButtonTapped:" destination="bt8-gR-hfz" eventType="touchUpInside" id="Gm9-ZN-wjo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-vg-hzd">
+                                <rect key="frame" x="227" y="706" width="175" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9838867188" green="0.9838867188" blue="0.9838867188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="option d">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="optionButtonTapped:" destination="bt8-gR-hfz" eventType="touchUpInside" id="q5b-x1-AV0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiH-kI-KxY">
+                                <rect key="frame" x="44" y="591" width="163" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9838867188" green="0.9838867188" blue="0.9838867188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="option a">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="optionButtonTapped:" destination="bt8-gR-hfz" eventType="touchUpInside" id="LHj-YW-h2h"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xx/xx" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP4-HX-z0A">
+                                <rect key="frame" x="44" y="136" width="163" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="19"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4bZ-1r-msd"/>
+                        <color key="backgroundColor" red="0.88069745131582389" green="0.9575195312" blue="0.90925973654918779" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aNB-Mk-FfT"/>
+                    <connections>
+                        <outlet property="optionButton1" destination="ZiH-kI-KxY" id="S3H-Nd-XBH"/>
+                        <outlet property="optionButton2" destination="3Yc-Er-HHR" id="hSu-Sx-Q4j"/>
+                        <outlet property="optionButton3" destination="Sfy-Ze-kaU" id="3Ne-BZ-XmI"/>
+                        <outlet property="optionButton4" destination="SaF-vg-hzd" id="9ld-Xs-ttG"/>
+                        <outlet property="progressLabel" destination="JP4-HX-z0A" id="SjT-DE-IW6"/>
+                        <outlet property="questionLabel" destination="RKz-8j-Xq8" id="9mf-TL-d0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxj-Ai-nbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2290.909090909091" y="286.82008368200837"/>
+        </scene>
+        <!--Timer-->
         <scene sceneID="Hz9-CX-Mfh">
             <objects>
-                <viewController id="Dhs-9s-nZ9" customClass="ViewControllerTwo" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerTwo" modalPresentationStyle="fullScreen" id="Dhs-9s-nZ9" customClass="ViewControllerTwo" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HLA-oH-NMQ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="readingBrain" translatesAutoresizingMaskIntoConstraints="NO" id="x2W-hC-TSR">
+                                <rect key="frame" x="-214" y="238" width="868" height="787"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcM-yC-fh7">
+                                <rect key="frame" x="56" y="362" width="138" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startPauseTapped:" destination="Dhs-9s-nZ9" eventType="touchUpInside" id="ThY-1c-fD2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJG-Zt-hun">
+                                <rect key="frame" x="247" y="362" width="138" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="END">
+                                    <fontDescription key="titleFontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="endTapped:" destination="Dhs-9s-nZ9" eventType="touchUpInside" id="hed-6y-RhU"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timerTitle" translatesAutoresizingMaskIntoConstraints="NO" id="xHv-3m-Xp9">
+                                <rect key="frame" x="81" y="64" width="285" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAK-tN-KjM">
+                                <rect key="frame" x="-29" y="238" width="504" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="80"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gA4-P0-ACM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.82421875" green="0.89453125" blue="0.9575195312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="Edi-Z4-Mgt"/>
+                    <navigationItem key="navigationItem" id="Hd4-6F-9sh"/>
+                    <connections>
+                        <outlet property="endButton" destination="TJG-Zt-hun" id="ICp-Dm-ihJ"/>
+                        <outlet property="startPauseButton" destination="qcM-yC-fh7" id="y3F-R9-5zJ"/>
+                        <outlet property="timerLabel" destination="gAK-tN-KjM" id="khW-Ye-2Af"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ys9-cQ-av3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="84"/>
+            <point key="canvasLocation" x="-440.4545454545455" y="296.86192468619248"/>
         </scene>
-        <!--View Controller Three-->
+        <!--Notes-->
         <scene sceneID="AJ5-hM-gp4">
             <objects>
-                <viewController id="Pf6-Zn-bo0" customClass="ViewControllerThree" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Pf6-Zn-bo0" customClass="ViewControllerThree" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ONx-ah-1XV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qXf-OK-zdZ">
+                                <rect key="frame" x="0.0" y="224" width="440" height="590"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82421875" green="0.89453125" blue="0.9575195312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="o2s-Sv-MuY" detailTextLabel="eyb-bO-naW" style="IBUITableViewCellStyleSubtitle" id="alj-9E-p8T">
+                                        <rect key="frame" x="0.0" y="50" width="440" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alj-9E-p8T" id="PMb-hz-CbL">
+                                            <rect key="frame" x="0.0" y="0.0" width="440" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o2s-Sv-MuY">
+                                                    <rect key="frame" x="20" y="8" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eyb-bO-naW">
+                                                    <rect key="frame" x="19.999999999999996" y="24.333333333333336" width="52.666666666666664" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.8247070312" green="0.8950195312" blue="0.9580078125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notesTitle" translatesAutoresizingMaskIntoConstraints="NO" id="dZb-Op-H3b">
+                                <rect key="frame" x="88" y="71" width="258" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mui-4H-qqf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.82421875" green="0.89453125" blue="0.9575195312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Notes" image="square.and.pencil" catalog="system" id="WHF-oU-ndn"/>
+                    <navigationItem key="navigationItem" id="Hh9-31-HKR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5en-RZ-CVA">
+                            <connections>
+                                <action selector="didTapNewNote" destination="Pf6-Zn-bo0" id="JJl-Y3-M9S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="qXf-OK-zdZ" id="Hye-eI-Czy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3T-R8-pvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1468" y="84"/>
+            <point key="canvasLocation" x="3145.909090909091" y="-389.12133891213392"/>
+        </scene>
+        <!--View Controller Four-->
+        <scene sceneID="IrL-nB-cWg">
+            <objects>
+                <viewController storyboardIdentifier="new" id="AGt-RX-LM7" customClass="ViewControllerFour" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hZA-SZ-L9j">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9y-XJ-OVX">
+                                <rect key="frame" x="10" y="134" width="420" height="52"/>
+                                <color key="backgroundColor" red="0.98531250000000004" green="0.98531250000000004" blue="0.98531250000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="pv7-4J-TWK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LfJ-E9-ujx">
+                                <rect key="frame" x="10" y="196" width="420" height="682"/>
+                                <color key="backgroundColor" red="0.9838867188" green="0.9838867188" blue="0.9838867188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ThG-dJ-yYo"/>
+                        <color key="backgroundColor" red="0.8813476562" green="0.9580078125" blue="0.9091796875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LfJ-E9-ujx" firstAttribute="leading" secondItem="ThG-dJ-yYo" secondAttribute="leading" constant="10" id="Gen-Tu-EdO"/>
+                            <constraint firstItem="ThG-dJ-yYo" firstAttribute="trailing" secondItem="LfJ-E9-ujx" secondAttribute="trailing" constant="10" id="Myb-f1-lEg"/>
+                            <constraint firstItem="ThG-dJ-yYo" firstAttribute="bottom" secondItem="LfJ-E9-ujx" secondAttribute="bottom" constant="10" id="dBu-Gk-Fmi"/>
+                            <constraint firstItem="LfJ-E9-ujx" firstAttribute="top" secondItem="T9y-XJ-OVX" secondAttribute="bottom" constant="10" id="f1n-8i-0Jp"/>
+                            <constraint firstItem="T9y-XJ-OVX" firstAttribute="leading" secondItem="ThG-dJ-yYo" secondAttribute="leading" constant="10" id="j2d-Ha-XGd"/>
+                            <constraint firstItem="ThG-dJ-yYo" firstAttribute="trailing" secondItem="T9y-XJ-OVX" secondAttribute="trailing" constant="10" id="pjA-4R-l0c"/>
+                            <constraint firstItem="T9y-XJ-OVX" firstAttribute="top" secondItem="ThG-dJ-yYo" secondAttribute="top" constant="10" id="uEi-dN-VlK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noteField" destination="LfJ-E9-ujx" id="qPF-Qg-pHe"/>
+                        <outlet property="titleField" destination="T9y-XJ-OVX" id="VME-5h-5y0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Uz-Mc-0IB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4043" y="-389"/>
+        </scene>
+        <!--View Controller Five-->
+        <scene sceneID="PgV-yQ-wyu">
+            <objects>
+                <viewController storyboardIdentifier="note" id="Elh-iE-jXh" customClass="ViewControllerFive" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hDx-UO-Ngd">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRp-BN-llr">
+                                <rect key="frame" x="10" y="134" width="330" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Iyd-ag-Olu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Scb-Kd-rel">
+                                <rect key="frame" x="10" y="204" width="420" height="674"/>
+                                <color key="backgroundColor" red="0.8969726562" green="0.9462890625" blue="0.9794921875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JK4-DO-pjU"/>
+                        <color key="backgroundColor" red="0.90584976936842987" green="0.95831490508231076" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="JK4-DO-pjU" firstAttribute="trailing" secondItem="Scb-Kd-rel" secondAttribute="trailing" constant="10" id="2S9-af-FE0"/>
+                            <constraint firstItem="JK4-DO-pjU" firstAttribute="bottom" secondItem="Scb-Kd-rel" secondAttribute="bottom" constant="10" id="DNS-nW-oD2"/>
+                            <constraint firstItem="JK4-DO-pjU" firstAttribute="trailing" secondItem="PRp-BN-llr" secondAttribute="trailing" constant="100" id="FcF-pc-Wws"/>
+                            <constraint firstItem="Scb-Kd-rel" firstAttribute="leading" secondItem="JK4-DO-pjU" secondAttribute="leading" constant="10" id="HSW-EE-Vxq"/>
+                            <constraint firstItem="PRp-BN-llr" firstAttribute="top" secondItem="JK4-DO-pjU" secondAttribute="top" constant="10" id="WwB-JR-SiV"/>
+                            <constraint firstItem="PRp-BN-llr" firstAttribute="leading" secondItem="JK4-DO-pjU" secondAttribute="leading" constant="10" id="f2H-tN-Gzm"/>
+                            <constraint firstItem="Scb-Kd-rel" firstAttribute="top" secondItem="PRp-BN-llr" secondAttribute="bottom" constant="10" id="jqb-tF-Sv3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noteLabel" destination="Scb-Kd-rel" id="nRm-Tw-VwU"/>
+                        <outlet property="titleLabel" destination="PRp-BN-llr" id="0dX-80-LdZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJp-pA-ZWt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5003" y="-389"/>
+        </scene>
+        <!--Credits Popup View Controller-->
+        <scene sceneID="V5i-Ec-EFr">
+            <objects>
+                <viewController storyboardIdentifier="CreditsPopupViewController" id="Lin-HN-djG" customClass="CreditsPopupViewController" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yHm-eo-5zj">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n8W-OV-xPn">
+                                <rect key="frame" x="48" y="228" width="353" height="501"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.8247070312" green="0.8950195312" blue="0.9580078125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="5f4-52-8Yz" kind="embed" id="shx-vh-sjZ"/>
+                                </connections>
+                            </containerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feedbackBrain" translatesAutoresizingMaskIntoConstraints="NO" id="jXo-yP-JXK">
+                                <rect key="frame" x="-39" y="313" width="517" height="333"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nice Work" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIj-3P-vwz">
+                                <rect key="frame" x="69" y="272" width="311" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bep-f0-aic">
+                                <rect key="frame" x="153" y="654" width="143" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="house.fill" catalog="system" title="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="Lin-HN-djG" eventType="touchUpInside" id="y9Z-o4-rgz"/>
+                                    <action selector="unwindToHome:" destination="SyT-7C-LyO" eventType="touchUpInside" id="jNf-MT-qiA"/>
+                                    <segue destination="SyT-7C-LyO" kind="unwind" unwindAction="unwindToHome:" id="GvE-wc-rDF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLU-yH-Ish">
+                                <rect key="frame" x="83" y="549" width="288" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GranthaSangamMN-Regular" family="Grantha Sangam MN" pointSize="17"/>
+                                <color key="textColor" red="0.06903076172" green="0.19628907740000001" blue="0.3857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s5G-5B-38F"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="feedbackContainerView" destination="n8W-OV-xPn" id="E1a-VR-IpY"/>
+                        <outlet property="feedbackDetailLabel" destination="jLU-yH-Ish" id="DZY-Cq-edf"/>
+                        <outlet property="feedbackTitleLabel" destination="bIj-3P-vwz" id="dBD-SY-XVz"/>
+                        <outlet property="homeButton" destination="bep-f0-aic" id="jcR-Yr-87o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGc-Bv-ruR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="SyT-7C-LyO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2046.818181818182" y="-1198.1171548117156"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="zZh-os-ozo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="u3l-tw-xd0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notes" image="square.and.pencil" catalog="system" selectedImage="square.and.pencil" id="xFU-bE-AFy"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="I2k-VC-hjP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BqW-Pd-9lr">
+                        <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pf6-Zn-bo0" kind="relationship" relationship="rootViewController" id="vRO-cw-Xnx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHm-2u-XPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2291" y="-389"/>
+        </scene>
+        <!--Quiz-->
+        <scene sceneID="hDd-vC-dpM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OJu-Gj-W2R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Quiz" image="lightbulb.min" catalog="system" id="PJ1-sQ-2kb"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="QPW-gJ-wc7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p3S-q2-yTi">
+                        <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DQ3-YQ-H5V" kind="relationship" relationship="rootViewController" id="oWa-7t-ew8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vqi-pp-1R1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516.81818181818187" y="286.82008368200837"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Fgh-Mu-wtt">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hvz-q9-XZJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yz6-JX-cqH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sVj-Q7-U1p" kind="relationship" relationship="viewControllers" id="iDN-VV-e7F"/>
+                        <segue destination="Dhs-9s-nZ9" kind="relationship" relationship="viewControllers" id="apc-Nb-Jjf"/>
+                        <segue destination="u3l-tw-xd0" kind="relationship" relationship="viewControllers" id="kBE-hs-Dni"/>
+                        <segue destination="OJu-Gj-W2R" kind="relationship" relationship="viewControllers" id="dXD-mX-pVU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZX6-A5-QPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440.4545454545455" y="-464.43514644351467"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4Av-Ya-ARi">
+            <objects>
+                <viewController id="5f4-52-8Yz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="akb-kM-Q4n">
+                        <rect key="frame" x="0.0" y="0.0" width="353" height="501"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Y8W-Q3-il9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P4G-Wt-33T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308" y="-1257"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="AuI-gc-S7H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sVj-Q7-U1p" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="jGg-W3-NPJ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9L7-7T-JvJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sZ3-tY-9at">
+                        <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MEE-uK-98c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1SA-mS-sWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451.36363636363637" y="-464.43514644351467"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dbX-Mi-obb"/>
+        <segue reference="vlh-YB-iRc"/>
+        <segue reference="MQu-tO-Irg"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="appTitle" width="748.33331298828125" height="529"/>
+        <image name="brainStrong" width="682.66668701171875" height="682.66668701171875"/>
+        <image name="feedbackBrain" width="2048" height="2048"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="lightbulb.min" catalog="system" width="115" height="128"/>
+        <image name="notesIcon" width="529" height="748.33331298828125"/>
+        <image name="notesTitle" width="748.33331298828125" height="529"/>
+        <image name="quizBrain" width="2048" height="2048"/>
+        <image name="quizIcon" width="529" height="748.33331298828125"/>
+        <image name="quizTitle" width="748.33331298828125" height="529"/>
+        <image name="readingBrain" width="2048" height="2048"/>
+        <image name="speechBox" width="529" height="748.33331298828125"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="121"/>
+        <image name="timer" catalog="system" width="128" height="123"/>
+        <image name="timerIcon" width="529" height="748.33331298828125"/>
+        <image name="timerTitle" width="748.33331298828125" height="529"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

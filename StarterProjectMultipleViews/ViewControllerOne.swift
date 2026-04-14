@@ -26,24 +26,68 @@
  */
 
 import UIKit
+import AVFoundation //for audio
 
-class ViewControllerOne: UIViewController {
+class ViewControllerOne: UIViewController{
     
     // MARK: - IBOutlets
-    
-    
+   
+    @IBOutlet weak var healthProgressView: UIProgressView!
+    @IBOutlet weak var brainImageView: UIImageView!
+    @IBOutlet weak var healthLabel: UILabel!
     
     // MARK: - Variables and Constants
     
-    
-    
+    var backgroundMusic: AVAudioPlayer?
     // MARK: - IBActions and Functions
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadQuizData()
+        updateBrain()
+    
     }
-
-
+    
+    
+    //plays background music
+    func playMusic (){
+        let path = Bundle.main.path(forResource:"music.mp3", ofType: nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            backgroundMusic = try AVAudioPlayer(contentsOf: url)
+            backgroundMusic?.numberOfLoops = -1 //infinite loops
+            backgroundMusic?.play()
+        } catch {
+            // couldn't load file
+        }
+        
+                
+    }
+    
+    
+    //updates the brain illustration depending on the health percentage
+    private func updateBrain() {
+        let health = Brain.shared.healthPercentage
+        
+        healthLabel.text = "\(health)%"
+        healthProgressView.progress = Float(health) / 100.0
+        
+        let imageName = Brain.shared.brainImageName()
+        brainImageView.image = UIImage(named: imageName)
+    }
+    
+    //allows user to switch the music on and off
+    @IBAction func musicSwitch(_ sender: Any) {
+        if ((sender as AnyObject).isOn == true){
+            playMusic()
+        }else {
+            backgroundMusic?.stop()
+            }
+        }
+    
+    @IBAction func unwindToHome(_ segue: UIStoryboardSegue) {}
+    
 }
 

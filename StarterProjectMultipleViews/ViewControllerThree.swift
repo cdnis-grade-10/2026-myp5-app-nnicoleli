@@ -27,15 +27,17 @@
 
 import UIKit
 
-class ViewControllerThree: UIViewController {
+class ViewControllerThree: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     // MARK: - IBOutlets
-    
+    @IBOutlet var table: UITableView!
     
     
     // MARK: - Variables and Constants
+    //array of tuples
+    //var models: [(title: String, note: String)] = []
     
-    
+    var models: [Note] = []
     
     // MARK: - IBActions and Functions
     
@@ -43,5 +45,72 @@ class ViewControllerThree: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        table.delegate = self
+        table.dataSource = self
+        title = "Notes"
+        self.table.isHidden = false
+        setupPreMadeNotes()
+        
+    }
+    
+    //loads the pre-made notes thats stored in the data file
+    private func setupPreMadeNotes() {
+        models = preMadeNotes
+        table.reloadData()
+    }
+    
+    //what happens when the new note button is tapped
+    @IBAction func didTapNewNote() {
+        //goes to view controller four
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "new") as? ViewControllerFour else {
+            return
+        }
+        vc.title = "New Note"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.completion = { noteTitle, note in
+            self.navigationController?.popToRootViewController(animated: true)
+            self.models.append(Note(title: noteTitle, body: note))
+            self.table.reloadData()
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    //Table stuff
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return models.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = models[indexPath.row].title
+        cell.detailTextLabel?.text = models[indexPath.row].body
+        
+        //fonts and sizes of the text in the cell
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 12)
+        
+        return cell
+        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+        let model = models[indexPath.row]
+        
+        //Show note controller
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "note")as? ViewControllerFive else {
+            return
+        }
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.title = "Note"
+        vc.noteTitle = model.title
+        vc.note = model.body
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
